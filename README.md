@@ -46,7 +46,8 @@ Sou **Economista formado pela UFMS**, atualmente cursando a **Pós-Tech AI Scien
 | Projeto | Descrição | Tech |
 |---------|-----------|------|
 | [**PayFlow — Previsão de Inadimplência**](https://github.com/luizmaibashi/Payflow-inadimplencia) | Modelo de ML para prever calotes em 90 dias. Inclui Feature Engineering, comparação de modelos (RF vs Logística), testes de balanceamento (SMOTE, class_weight, Undersampling) e tradução da Matriz de Confusão em **impacto financeiro (R$ 186k de perda evitada)**. | `Python` `Scikit-Learn` `imblearn` `Pandas` |
-
+| [**Tech-Challenge-Fase1-NPS**](https://github.com/luizmaibashi/Tech-Challenge-Fase1-NPS) | Pipeline completo de IA para predição de NPS e prevenção de Churn. Sistema preditivo de satisfação do cliente com foco em retenção e simulador de ROI (308%). Traduzindo dados operacionais de e-commerce em valor de negócio através de Machine Learning.. | `Python` `Scikit-Learn`  `Pandas`|
+| [**pipeline_churn_finance**](https://github.com/luizmaibashi/pipeline_churn_finance) | Projeto de portfólio: pipeline de ML que protege R$2,4bi em custódia ao reduzir churn de 12% → 9%. Dados sintéticos com lógica de mercado real | `scikit-learn` · `Streamlit` · `Plotly`
 ---
 
 
