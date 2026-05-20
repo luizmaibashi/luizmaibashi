@@ -1,62 +1,60 @@
-[PROFILE_README.md](https://github.com/user-attachments/files/26522127/PROFILE_README.md)
-<h1 align="center">Olá! Eu sou o Luiz Fernando 👋</h1>
+# Olá! Eu sou o Luiz Fernando 👋
 
-<h3 align="center">Economista  →  Data Science & Machine Learning</h3>
+### AI Scientist & Data Scientist | Economista
 
-<p align="center">
-  <em>Resolvendo problemas reais de negócio com Dados | Python, SQL, ML</em>
-</p>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/luiz-fernando-maibashi-515073212/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-</p>
+Conectando a modelagem econômica e quantitativa à engenharia de Machine Learning e ao paradigma de Software 3.0. Meu foco é projetar pipelines e workflows agênticos que traduzem dados em impacto financeiro direto (ROI).
 
 ---
 
-### 🧑‍💻 Sobre Mim
+## 🛠️ Stack Tecnológica & Caixa de Ferramentas
 
-Sou **Economista formado pela UFMS**, atualmente cursando a **Pós-Tech AI Scientist na FIAP**. Minha missão é conectar a visão de negócios com a ciência de dados para gerar **decisões de valor real baseadas em evidências**.
-
-- 🎯 **Foco:** Machine Learning aplicado a problemas financeiros (Crédito, Risco, Inadimplência)
-- 📊 **Abordagem:** Cada modelo precisa se pagar — traduzo métricas técnicas em **impacto financeiro (R$)**
-- 📍 São Paulo, SP
-
----
-
-### 🛠️ Tech Stack
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white"/>
-</p>
+| Categoria | Tecnologias e Ferramentas |
+| :--- | :--- |
+| **Machine Learning & Estatística** | Python (Scikit-Learn, XGBoost, LightGBM), Clusterização (K-Means), Regressão, Séries Temporais, Métricas de Custo/Matriz de Confusão |
+| **MLOps & Engenharia de Software** | Docker, Kedro Framework (Pipelines Modulares), Git/GitHub (TDD para IA), Unix, CI/CD |
+| **Engenharia de Dados & Infra** | SQL, PySpark, FastAPI (APIs Assíncronas), Streamlit, MLflow, AWS (SQS/EC2) |
+| **IA Generativa & Agentes** | NLP, RAG Avançado (LangChain/LlamaIndex), Workflows Agênticos, LLM-as-a-Judge |
 
 ---
 
-### 🏆 Projetos em Destaque
+## 🚀 Projetos de Destaque
 
-| Projeto | Descrição | Tech |
-|---------|-----------|------|
-| [**PayFlow — Previsão de Inadimplência**](https://github.com/luizmaibashi/Payflow-inadimplencia) | Modelo de ML para prever calotes em 90 dias. Inclui Feature Engineering, comparação de modelos (RF vs Logística), testes de balanceamento (SMOTE, class_weight, Undersampling) e tradução da Matriz de Confusão em **impacto financeiro (R$ 186k de perda evitada)**. | `Python` `Scikit-Learn` `imblearn` `Pandas` |
-| [**Tech-Challenge-Fase1-NPS**](https://github.com/luizmaibashi/Tech-Challenge-Fase1-NPS) | Pipeline completo de IA para predição de NPS e prevenção de Churn. Sistema preditivo de satisfação do cliente com foco em retenção e simulador de ROI (308%). Traduzindo dados operacionais de e-commerce em valor de negócio através de Machine Learning.. | `Python` `Scikit-Learn`  `Pandas`|
-| [**pipeline_churn_finance**](https://github.com/luizmaibashi/pipeline_churn_finance) | Projeto de portfólio: Ecossistema Financeiro de Alta Renda (AuC R$ 75bi). Desenvolvi um pipeline robusto com Scikit-Learn e Feature Engineering personalizado que mitiga o Data Leakage e gera recomendações de retenção em tempo real. A solução, integrada a um dashboard Streamlit, demonstra um potencial de proteção de R$ 1,5 bilhão em custódia, resultando em um ROI anual estimado de R$ 17 milhões. | `scikit-learn` · `Streamlit` · `Plotly`
-| [**Offshore-Intelligence-System**](https://github.com/luizmaibashi/Offshore-Intelligence-System.) | Projeto de portfólio: 🏦 Offshore Intelligence System (OIS): Sistema de inteligência preditiva para Wealth Management que automatiza a priorização de leads para diversificação internacional. Utilizando Machine Learning (Clustering) e heurísticas financeiras complexas, o projeto identifica oportunidades de alto ROI em uma base de +40 mil clientes. Inclui um dashboard interativo (Streamlit) com simulador de impacto comercial e lead scoring em tempo real, seguindo rigorosamente a metodologia CRISP-DM.| `Python` · `scikit-learn` · `Streamlit` · `Pandas` · `Plotly`
+### 🏦 [Churn Finance — Prevenção de Churn Preditiva e Agêntica](https://github.com/luizmaibashi/pipeline_churn_finance)
+*   **Problema de Negócio:** Reduzir a rotatividade silenciosa de investidores em uma carteira financeira simulada de R$ 75 bilhões.
+*   **Abordagem de Engenharia:** Pipeline modular utilizando **PySpark** e governança via **MLflow**. Implementação de um fluxo de monitoramento de *Data Drift* contínuo via teste estatístico de Kolmogorov-Smirnov (KS-Test) acoplado a um **Workflow Agêntico** (LLM monitora o comportamento e gera alertas automatizados de risco).
+*   **Impacto Financeiro:** Proteção estimada de R$ 1,5 bilhão em custódia, com ROI anual projetado em R$ 17 milhões.
+*   *Tech Stack:* `Python` `PySpark` `MLflow` `FastAPI` `Streamlit` `Scikit-Learn`
+
+### 💳 [PayFlow — Previsão de Inadimplência com Foco em ROI](https://github.com/luizmaibashi/Payflow-inadimplencia)
+*   **Problema de Negócio:** Identificar a probabilidade de inadimplência (default > 90 dias) e otimizar a concessão de crédito.
+*   **Abordagem de Engenharia:** Desenvolvimento baseado no ciclo **CRISP-DM**. Implementação de engenharia de features personalizada e testes estatísticos de balanceamento (SMOTE, class_weights). Otimização sistemática do threshold (ponto de corte) do modelo para equilibrar a taxa de aprovação com o risco financeiro.
+*   **Impacto Financeiro:** Evitou uma perda simulada de R$ 186 mil na carteira ativa através da minimização de falsos negativos (Foco em Recall).
+*   *Tech Stack:* `Python` `Scikit-Learn` `imblearn` `Pandas` `Jupyter Notebook`
+
+### 🛡️ [Shadow FX Terminal — AML & Risk Engine](https://github.com/luizmaibashi/Shadow-FX-Terminal) *(ou repositório correspondente)*
+*   **Problema de Negócio:** Motor analítico e regulatório para detecção de fraudes financeiras e lavagem de dinheiro (Anti-Money Laundering).
+*   **Abordagem de Engenharia:** Arquitetura desenhada sob premissas de *Security-by-Design*, garantindo a anonimização irreversível de dados sensíveis de clientes (SHA-256) e conteinerização total com **Docker** para isolamento e reprodutibilidade do ambiente de inferência.
+*   *Tech Stack:* `Python` `Docker` `Pandas` `Cryptography`
+
+### 📈 [Offshore Intelligence System (OIS)](https://github.com/luizmaibashi/Offshore-Intelligence-System.)
+*   **Problema de Negócio:** Segmentação de leads para diversificação patrimonial internacional em Wealth Management.
+*   **Abordagem de Engenharia:** Aplicação de algoritmos de Machine Learning Não-Supervisionado (**K-Means Clustering**) em dados financeiros de +40 mil clientes para identificar perfis qualificados.
+*   **Impacto Comercial:** Priorização comercial inteligente integrada a um dashboard interativo no Streamlit contendo simulador de comissionamento em tempo real.
+*   *Tech Stack:* `Python` `Scikit-Learn` `Streamlit` `Plotly`
+
 ---
 
+## ⚙️ Diretrizes de Desenvolvimento (Como eu trabalho)
 
-### 🎓 Formação
-
-- 🏛️ **Ciências Econômicas** — Universidade Federal de Mato Grosso do Sul (UFMS)
-- 🤖 **Pós-Tech AI Scientist** — FIAP (em andamento)
+*   **Orientação a ROI:** Um modelo estatístico isolado não tem valor. Todo pipeline preditivo que desenvolvo é traduzido em impacto no P&L (perdas e lucros) ou redução de risco regulatório.
+*   **Controle de Entropia (Clean Code):** Troco notebooks monolíticos por pipelines de produção limpos e modulares (como o padrão de *Nodes* e *Catalogs* do Kedro Framework), evitando o acúmulo de débito técnico de código de IA.
+*   **TDD para IA:** Escrever testes de contrato e unitários antes de realizar refatorações automáticas ou assistidas por agentes para blindar o comportamento do produto.
 
 ---
 
+## 📫 Onde me encontrar
 
+*   💼 **Trabalho Atual:** Analista Econômico e de Dados na **ABRACAF** (Concessionários Fiat)
+*   🎓 **Especialização:** Pós-Tech em AI Scientist pela **FIAP** (em andamento)
+*   🔗 **LinkedIn:** [Luiz Fernando Saguma Maibashi](https://www.linkedin.com/in/luiz-fernando-maibashi-515073212/)
+*   ✉️ **E-mail:** [luizfmaibashi@gmail.com](mailto:luizfmaibashi@gmail.com)
