@@ -31,7 +31,7 @@ Conectando a modelagem econômica e quantitativa à engenharia de Machine Learni
 *   **Impacto Financeiro:** Evitou uma perda simulada de R$ 186 mil na carteira ativa através da minimização de falsos negativos (Foco em Recall).
 *   *Tech Stack:* `Python` `Scikit-Learn` `imblearn` `Pandas` `Jupyter Notebook`
 
-### 🛡️ [Shadow FX Terminal — AML & Risk Engine](https://github.com/luizmaibashi/Shadow-FX-Terminal) *(ou repositório correspondente)*
+### 🛡️ [Shadow FX Terminal — AML & Risk Engine](https://github.com/luizmaibashi/shadow_fx_terminal) 
 *   **Problema de Negócio:** Motor analítico e regulatório para detecção de fraudes financeiras e lavagem de dinheiro (Anti-Money Laundering).
 *   **Abordagem de Engenharia:** Arquitetura desenhada sob premissas de *Security-by-Design*, garantindo a anonimização irreversível de dados sensíveis de clientes (SHA-256) e conteinerização total com **Docker** para isolamento e reprodutibilidade do ambiente de inferência.
 *   *Tech Stack:* `Python` `Docker` `Pandas` `Cryptography`
