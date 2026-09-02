@@ -1,4 +1,4 @@
-# Olá! Eu sou o Luiz Fernando 👋
+# Olá! Eu sou o Luiz Fernando 
 
 ### AI Scientist & Data Scientist | Economista
 
