@@ -42,17 +42,15 @@ Onze tickets de investigação e cinco ADRs depois, o sistema faz exatamente o q
 
 ---
 
-## Reúso de dados abertos e priorização municipal de alfabetização
+## Como penso IA e trabalho com uma base de conhecimento
 
-Dois repositórios, um mesmo motor analítico: [tech-challenge-fase3-alfabetizacao](https://github.com/luizmaibashi/tech-challenge-fase3-alfabetizacao) nasceu como Tech Challenge da Pós-Tech FIAP, e [painel-alfabetizacao-cgu](https://luizmaibashi.github.io/painel-alfabetizacao-cgu/) é a versão inscrita no 2º Concurso de Reúso de Dados Abertos da CGU.
+Não uso um agente de IA como autocomplete. Uso como um harness: um sistema com protocolo escrito (o que o agente decide sozinho, o que exige minha confirmação, o que nunca é feito sem revisão), memória que persiste entre sessões e um conjunto de gates automáticos que rodam antes de qualquer código não trivial ser aceito.
 
-O enunciado pedia um modelo que previsse se um aluno individual seria alfabetizado. Ele foi construído com rigor e reprovado no próprio critério de falsificação que o projeto definiu antes de treinar qualquer coisa: 0,6047 contra a meta de 0,6331 do PDE. A investigação continuou, sem forçar essa conclusão a caber num README bonito, até achar onde o dado sustenta previsão de verdade: um modelo de priorização municipal, validado de forma prospectiva contra o ciclo real de 2025 em 5.285 municípios (AUC ponderada 0,6167 contra 0,4523 do baseline ingênuo). A proveniência de cada fonte pública (INEP, IBGE) é verificada por hash SHA-256.
+Minha base de conhecimento pessoal é esse harness. Ela guarda o protocolo de engenharia (quando abrir um ADR, quando exigir uma spec antes de aceitar código gerado por um agente), o histórico de decisão de cada projeto, e um mecanismo de revisão espaçada que sabatina se eu de fato entendi um conceito técnico que usei, não só se ele está documentado em algum lugar.
+
+Todo código não trivial gerado por agente passa por revisão de diff antes de virar parte de um projeto, e toda decisão de arquitetura vira ADR com o trade-off explícito, não só o resultado escolhido. A regra que mais aplico é simples: delego a geração da primeira versão, nunca delego o entendimento do porquê ela funciona.
 
 ---
-
-## Como trabalho
-
-Todo projeto acima segue o mesmo processo: entender o problema de negócio antes de abrir um notebook, definir o critério de sucesso antes de treinar qualquer modelo, medir com intervalo de confiança em vez de ponto solto, e documentar decisão de arquitetura junto com o trade-off que ela aceitou. Uso IA agêntica como parceira ativa de engenharia, sob protocolos de revisão que exigem entender o que foi gerado antes de aceitar, não só rodar e publicar.
 
 ## Onde me encontrar
 
