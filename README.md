@@ -8,37 +8,41 @@ O critério que uso em todo projeto abaixo é simples: o que foi medido, com que
 
 ## Projetos em destaque
 
-### [StableTreasury](https://github.com/luizmaibashi/stable-treasury): engenharia de risco para tesouraria em stablecoin
+### [NPS Predictor AI](https://github.com/luizmaibashi/Tech-Challenge-Fase1-NPS): rastreei um F1 bom demais até a variável errada
 
-Uma empresa que usa stablecoin como capital de giro precisa separar o saldo exibido na carteira da liquidez que sobra depois de um choque de preço. O Depeg Risk Engine calcula VaR e Expected Shortfall sobre o histórico real de USDC e USDT, em vez de assumir que os dois valem sempre US$ 1. O Rail Comparator simula o custo de trilhos de pagamento alternativos, deixando explícito qual premissa (o spread de Wire, por exemplo) muda a conclusão.
+O modelo de previsão de NPS bateu 0,79 de F1 na primeira rodada, número bom demais pra ser verdade. Rastreei até achar duas variáveis que só existiam depois da experiência do cliente, e o F1 caiu pra 0,57 sem elas. Numa segunda fase fui além da predição: rodei um experimento causal pra testar se agir sobre essa previsão muda o resultado de verdade, com benchmark de modelos, SHAP e monitor de drift, tudo coberto por 43 testes.
 
-Um caso comercial de pré-pagamento foi investigado dentro do próprio projeto e encerrado por falta de evidência de uma lacuna real frente a bancos e sistemas de tesouraria já existentes. Essa decisão está documentada, não escondida.
+**No ar:** [luizmaibashi.github.io/Tech-Challenge-Fase1-NPS](https://luizmaibashi.github.io/Tech-Challenge-Fase1-NPS/) · **Stack:** Python, Scikit-Learn, CRISP-DM.
 
-**Stack:** Python, Streamlit, SQLAlchemy, Postgres, Docker.
+### [PayFlow](https://github.com/luizmaibashi/Payflow-inadimplencia): um agente que decide crédito sem ver o score
 
-### [Shadow FX Terminal](https://github.com/luizmaibashi/shadow_fx_terminal): compliance AML para stablecoin com contexto macroeconômico
+O agente de LLM deste projeto aprova ou nega crédito sem nunca ver o score do cliente. Rodei um backtest com amostra calculada antes de ver qualquer resultado (n=564) e o veredito não foi o que eu esperava: o agente não separa risco melhor que o acaso. Fui atrás do motivo e achei que o próprio modelo campeão também perde quase toda capacidade de discriminar nessa mesma fatia de dado, então o limite é do dado, não do agente.
 
-Nasceu de uma pergunta de estatística: o brasileiro que compra USDT está especulando ou se protegendo da desvalorização do Real? A resposta virou a variável que falta na maioria dos sistemas de AML, que olham só o comportamento individual da transação.
+**Stack:** Python, Scikit-Learn, Streamlit, LLM (Gemini/Groq).
 
-O pipeline tem três camadas: regras determinísticas das Resoluções BCB 519 a 521, um Isolation Forest calibrado com um Índice de Risco Fiscal próprio, e um LLM que lê atas do Copom para julgar os casos em zona cinzenta. Medido: a camada de contexto melhora a precisão dos reportes ao COAF de 35,9% para 44,8%. O trade-off, também medido e não escondido, é que o falso positivo em poupador legítimo aumenta entre 2,3 e 3,5 vezes.
+### [Shadow FX Terminal](https://github.com/luizmaibashi/shadow_fx_terminal): compliance de AML com uma pergunta de macroeconomia dentro
+
+Sistema de compliance pra stablecoin nasceu de uma dúvida de macroeconomia: quem compra USDT no Brasil está especulando ou se protegendo do Real? Testei essa ideia como uma camada extra de contexto no pipeline de AML, ao lado das regras determinísticas do BCB e de um Isolation Forest. Essa camada levou a precisão dos reportes ao COAF de 35,9% pra 44,8%, com o custo em falso positivo de poupador legítimo também medido.
 
 **Stack:** Python, Scikit-Learn, FastAPI, Streamlit. Licença MIT.
 
-### [PayFlow](https://github.com/luizmaibashi/Payflow-inadimplencia): previsão de risco de crédito com um resultado negativo investigado até a causa raiz
+### [StableTreasury](https://github.com/luizmaibashi/stable-treasury): engenharia de risco pra quem assume que stablecoin vale sempre US$ 1
 
-A Camada 1 treina sobre dado real do Home Credit Default Risk (AUC 0,776). A Camada 2 adiciona um agente de underwriting que nunca vê o score, por desenho de schema. O backtest com poder estatístico (n=564, calculado antes de rodar, não depois) respondeu se o agente separa risco real melhor que o acaso: o intervalo de confiança da separação cruza zero. O agente não discrimina de forma detectável.
+Boa parte dos sistemas financeiros trata USDC e USDT como se o preço nunca saísse de US$ 1. Construí um motor que calcula VaR e Expected Shortfall sobre o histórico real dos dois, pra mostrar quanto essa suposição custa quando quebra. No meio do caminho surgiu um caso comercial de pré-pagamento, investiguei e encerrei dentro do próprio projeto por falta de evidência de uma lacuna real.
 
-Investigar por quê levou a um achado mais específico: dentro da zona cinzenta que o agente avalia, o próprio modelo campeão também perde quase toda capacidade discriminativa (AUC 0,56, intervalo que não contém 0,50). A conclusão não é sobre agentes de LLM decidirem crédito mal, e sim sobre essa fatia do dataset estar genuinamente perto do limite do previsível.
+**Stack:** Python, Streamlit, SQLAlchemy, Postgres, Docker.
 
-**Stack:** Python, Scikit-Learn, Streamlit, LLM (Gemini/Groq) como agente de underwriting.
+### [Tech Challenge Fase 3: Alfabetização](https://github.com/luizmaibashi/tech-challenge-fase3-alfabetizacao): um modelo reprovou, e mudei o grão do problema
 
-### [Offshore Intelligence System](https://github.com/luizmaibashi/Offshore-Intelligence-System.): auditoria de um sistema de ML que não fazia o que dizia fazer
+O desafio pedia um modelo que prevê alfabetização aluno por aluno. Testei contra o critério de sucesso que eu tinha definido antes de treinar qualquer coisa, e reprovou. Em vez de forçar o resultado, mudei o grão pra priorização municipal, e esse segundo modelo bate o baseline na maior parte dos estados analisados.
 
-Este projeto começou como auditoria, não como construção. Um sistema de priorização de clientes offshore chegava funcionando, mas com alegações que não batiam com o próprio código: pesos descritos como "calibrados por especialista" sem calibração nenhuma, um teste de hipótese citado como diferença confirmada que na verdade tinha efeito estatístico trivial, e um bug real em que notebook e dashboard calculavam o score do mesmo cliente com fórmulas diferentes.
+**Stack:** Python, Scikit-Learn, SHAP.
 
-Onze tickets de investigação e cinco ADRs depois, o sistema faz exatamente o que sempre fez, mas agora dá para provar isso, e cada limitação está declarada em vez de escondida. O deploy também foi endurecido: container roda com usuário não root, imagem pinada por digest.
+### [Pipeline Churn Finance](https://github.com/luizmaibashi/pipeline_churn_finance): churn prediction refeito pra escala institucional
 
-**Stack:** Python, Scikit-Learn (K-Means), Streamlit.
+Peguei o mesmo problema de churn e reconstruí pensando em escala de gestora de patrimônio de verdade: PySpark, governança via MLflow, dado sintético tratado com o mesmo rigor de dado real. Pra publicar sem manter servidor no ar, portei o modelo pra rodar dentro do navegador, com 58 testes garantindo que o resultado bate com a versão Python.
+
+**No ar:** [luizmaibashi.github.io/pipeline_churn_finance](https://luizmaibashi.github.io/pipeline_churn_finance/) · **Stack:** Python, PySpark, MLflow, FastAPI, Streamlit.
 
 ---
 
