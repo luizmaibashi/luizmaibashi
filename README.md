@@ -4,6 +4,7 @@ Economista, hoje analista econômico e de dados na ABRACAF (rede de concessioná
 
 O critério que uso em todo projeto abaixo é simples: o que foi medido, com que intervalo de confiança, e o que não se sustentou quando testado. Um projeto que mede e reporta um resultado negativo me diz mais sobre o autor do que um projeto que só reporta acerto.
 
+Portfólio em site : https://caderno-portfolio.pages.dev/
 ---
 
 ## Projetos em destaque
