@@ -48,7 +48,7 @@ processo / dado  →  regra em código  →  ML clássico  →  chamada de LLM  
 
 Em metade dos projetos o problema era tabular, com rótulo, e ML clássico resolvia mais barato. Onde o LLM entrou, ele lê, propõe ou explica, e em quase todos a decisão final fica com código ou com uma pessoa. A exceção é o Shadow FX, onde o juiz LLM dá o veredito na zona cinza e ainda não foi avaliado. É o próximo teste dele.
 
-O que ainda falta: ROI medido em operação real. Os ROIs que publiquei (NPS e Offshore) usam premissas declaradas sobre dado sintético ou simulado. A ABRACAF é onde isso pode acontecer primeiro: o tempo de preparo já caiu, falta medir a acurácia da leitura e o custo da revisão.
+Quase todo projeto da tabela tem um resultado que não se sustentou quando testei, e ele está publicado. Um projeto que mede e reporta um resultado negativo me diz mais sobre o autor do que um projeto que só reporta acerto.
 
 ---
 
