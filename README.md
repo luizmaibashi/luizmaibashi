@@ -27,7 +27,7 @@ Portfólio em site: https://caderno-portfolio.pages.dev/
 - **[Raio-X da Carteira](https://github.com/luizmaibashi/raio-x-carteira)** (Hack Brasil 2026). Nenhum número da simulação tributária sai do LLM. Ele só escreve a explicação, e um verificador descarta o texto que cita número fora do cálculo. A conta bate com as calculadoras oficiais da Receita em 19 de 19 casos.
 - **[PayFlow](https://github.com/luizmaibashi/Payflow-inadimplencia).** Um agente que escrevia parecer de crédito não separou risco melhor que o acaso: +1,3 pp, IC95% de -6,7 a +9,2, em 564 casos. Custou US$ 7,52 descobrir isso, e por causa desse resultado não construí a tela de produção.
 - **[Shadow FX Terminal](https://github.com/luizmaibashi/shadow_fx_terminal).** Na detecção de lavagem com stablecoin, a regra sozinha pegou 1.314 de 1.315 transações de fracionador. O modelo de anomalia não somou nada, e o juiz LLM receberia 25,8% dos casos, contra 0,2% previstos no desenho. O dado é sintético e o teste é circular, e isso está escrito lá.
-- **[Offshore Intelligence](https://github.com/luizmaibashi/Offshore-Intelligence-System.).** A heurística de negócio venceu o classificador treinado.
+- **[Offshore Intelligence](https://github.com/luizmaibashi/Offshore-Intelligence-System).** A heurística de negócio venceu o classificador treinado.
 
 Quase todo projeto meu tem um resultado que não se sustentou quando testei, e ele está publicado. Acho que isso diz mais sobre como eu trabalho do que uma lista de acertos.
 
@@ -56,7 +56,7 @@ O agente escreve a primeira versão. Prever o resultado, achar a falha e decidir
 | [Pipeline Churn Finance](https://github.com/luizmaibashi/pipeline_churn_finance) | Churn por queda de saldo chega tarde | ML clássico + chat opcional | Consulta a API do modelo. Há modo demo sem LLM | Recall 7,14% contra 0% do baseline, IC da diferença [0; 17,9] pp, 28 eventos |
 | [NPS Predictor](https://github.com/luizmaibashi/Tech-Challenge-Fase1-NPS) | E-commerce só mede NPS depois do dano | ML clássico, roda no navegador | Não usa | F1 caiu de 0,79 para 0,57 quando tirei duas variáveis com vazamento. Contra dar cupom a todos, o ganho é pequeno |
 | [Alfabetização](https://github.com/luizmaibashi/tech-challenge-fase3-alfabetizacao) | Gestor de educação recebe tabela crua do INEP e não sabe onde antecipar risco | ML clássico em nível de município | Não usa | Modelo por aluno perdeu do baseline. O municipal ganhou +0,027 de AUC, IC95% [+0,007; +0,048] |
-| [Offshore Intelligence](https://github.com/luizmaibashi/Offshore-Intelligence-System.) | Assessor cruza relatórios à mão para achar gap offshore | Score por regra + ML clássico | Não usa | A heurística de negócio venceu o classificador treinado. Outcome simulado |
+| [Offshore Intelligence](https://github.com/luizmaibashi/Offshore-Intelligence-System) | Assessor cruza relatórios à mão para achar gap offshore | Score por regra + ML clássico | Não usa | A heurística de negócio venceu o classificador treinado. Outcome simulado |
 | [StableTreasury](https://github.com/luizmaibashi/stable-treasury) | Tesouraria trata stablecoin como se valesse sempre US$ 1 | VaR e Expected Shortfall sobre histórico real | Não usa | O caso comercial foi investigado e encerrado por falta de evidência |
 
 </details>
